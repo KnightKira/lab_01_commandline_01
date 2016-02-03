@@ -1,4 +1,3 @@
-
 Lab - Entering Commands
 ==========
 Follow the instructions line-by-line.  
@@ -17,9 +16,11 @@ $ ls<ENTER>
 
 Copy and paste the output of ls below.
 ----------
-
-
-
+ent-v314-015:~ student$ ls
+Applications	Downloads	Music		Public		VirtualBox VMs
+Desktop		Library		My Song.band	Sites		vms
+Documents	Movies		Pictures	Things
+ent-v314-015:~ student$ ls D
 ==========
 2a. Type: 
 
@@ -27,19 +28,23 @@ $ ls D<TAB>
 
 What happens?  Describe it below.
 ----------
-
-
+nothing happen
 
 ==========
 2b. Press <TAB> one more time.  Copy and paste the output below.
 ----------
-
+ent-v314-015:~ student$ ls D
+Desktop/   Documents/ Downloads/ 
+ent-v314-015:~ student$ ls D
 
 
 ==========
 2c. Now press <ENTER>. Copy and paste the output below.
 ----------
 
+ent-v314-015:~ student$ ls D
+ls: D: No such file or directory
+ent-v314-015:~ student$ 
 
 
 ==========
@@ -49,6 +54,9 @@ $ ls -l Documents<ENTER>
 
 Copy and paste the first *two lines* of output below.
 ----------
+ent-v314-015:~ student$ ls -1 Documents
+Adobe
+AdobeStockPhotos
 
 
 
@@ -60,6 +68,9 @@ $ ls -a Documents
 Copy and paste the first *two lines* of output below.
 ----------
 
+ent-v314-015:~ student$ ls -a Documents
+.			Arduino			Pro Tools
+..			Avid Projects		Processing
 
 
 ==========
@@ -69,6 +80,7 @@ Copy and paste the first *two lines* of output below.
 
 What command was repeated?
 ----------
+ent-v314-015:~ student$ ls -a Documents
 
 
 
@@ -80,7 +92,7 @@ What command was repeated?
 What command was repeated?
 ----------
 
-
+ent-v314-015:~ student$ ls -a Documents
 
 ==========
 7.  Type:
@@ -89,6 +101,10 @@ $ ls /Vol<TAB><ENTER>
 
 What is the result of pressing tab?
 ----------
+ent-v314-015:~ student$ ls /Volumes/
+Macintosh HD
+ent-v314-015:~ student$ 
+
 
 
 
@@ -99,37 +115,38 @@ $ ls doesnotexist
 
 Copy and paste the output below.
 ----------
-
+ent-v314-015:~ student$ ls doesnotexist
+ls: doesnotexist: No such file or directory
+ent-v314-015:~ student$ 
 
 
 ==========
 9.  What key do I press to go to the previous command?
 ----------
-
+up
 
 
 ==========
 10.  Name two flags that we used in this exercise.
 ----------
-
+-a
 
 
 ==========
 11.  What key do I use to attempt to autocomplete a command or a file name?
 ----------
 
-
+<tab>
 
 ==========
 12.  What was the main command that we used throughout this exercise?
 ----------
-
-
+ls
 
 ==========
 13.  Name one argument that we passed to the command.
 ----------
-
+ls-a and ls -1
 
 
 ==========
@@ -139,7 +156,34 @@ $ foo<ENTER>
 
 Copy and paste the output below.
 ----------
+ent-v314-015:~ student$ footprint 
+footprint: ERROR: No process to examine specified
+Usage:
+Data Gathering Mode: (Must be running as root)
+footprint -proc <process name>|-pid <PID> [-targetChildren] [Data reporting options] [-o <output file location>]
 
+or
+Analyze Single Input File
+footprint -i <file path> [Data reporting options]
+
+Data Reporting Options:
+        -swapped			: Display swapped bytes information where applicable
+     -categories			: Detailed output on a per-VM region type level (medium detail)
+        -regions			: Display all memory objects and associated regions that contributes to each category (high detail)
+       -graphics			: Gather graphics data if available.
+-collapseSharing			: Do not group shared memory output by process.
+         -malloc <Detail level>		: Gather malloc information (can be slow).
+
+					Detail Levels:
+					summary:	High-level summary of allocated memory
+					purge:		Break-down to purgeability types
+					zone:		Further break-down to per-malloc zone totals
+					allocTypes:	Break down to individual allocation type totals
+					allocInstances:	List individual allocations
+
+            -min <min size in bytes>	: Specify minimum number of bytes required to display data in each category and sub-category
+              -h			: Display usage
+ent-v314-015:~ student$ 
 
 
 ==========
@@ -149,6 +193,34 @@ Copy and paste the output below.
 
 Copy and paste the output below.
 ----------
+nt-v314-015:~ student$ footprint 
+footprint: ERROR: No process to examine specified
+Usage:
+Data Gathering Mode: (Must be running as root)
+footprint -proc <process name>|-pid <PID> [-targetChildren] [Data reporting options] [-o <output file location>]
+
+or
+Analyze Single Input File
+footprint -i <file path> [Data reporting options]
+
+Data Reporting Options:
+        -swapped			: Display swapped bytes information where applicable
+     -categories			: Detailed output on a per-VM region type level (medium detail)
+        -regions			: Display all memory objects and associated regions that contributes to each category (high detail)
+       -graphics			: Gather graphics data if available.
+-collapseSharing			: Do not group shared memory output by process.
+         -malloc <Detail level>		: Gather malloc information (can be slow).
+
+					Detail Levels:
+					summary:	High-level summary of allocated memory
+					purge:		Break-down to purgeability types
+					zone:		Further break-down to per-malloc zone totals
+					allocTypes:	Break down to individual allocation type totals
+					allocInstances:	List individual allocations
+
+            -min <min size in bytes>	: Specify minimum number of bytes required to display data in each category and sub-category
+              -h			: Display usage
+ent-v314-015:~ student$ 
 
 
 
@@ -159,3 +231,7 @@ $ ls -a Desktop
 
 What is the command, flag, argument, and prompt?
 ----------
+command is ls
+flag is -
+argument Desktop
+prompt $
